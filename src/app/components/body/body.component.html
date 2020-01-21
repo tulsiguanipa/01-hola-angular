@@ -1,0 +1,36 @@
+<div class="row">
+
+    <div class="col">
+        <h1>*NgIf</h1>
+        <hr> <!-- es una linea -->
+        <div *ngIf="mostrar" class="card text-white bg-dark mb-3" style="width: 100%;">
+            <div class="card-body">
+              <h5 class="card-title"> Autor: {{ frase.autor }}</h5>
+              <p class="card-text">Frase: {{ frase.mensaje }}</p>
+
+              <!-- cuando se quiere hacer referencia a una informacion definida en el component.ts se tiene que hacer padre e hijo -->
+            </div>
+        </div>
+
+        <button (click)= "mostrar = !mostrar "class="btn btn-outline-primary btn-block"> Mostrar/Ocultar </button>
+
+    </div>
+
+    <div class="col">
+        <h1>*NgFor</h1>
+        <hr> <!-- es una linea -->
+
+        <ul class="list-group" style="width: 100%;">
+            <li *ngFor="let cuca of personajes; let i = index " class="list-group-item">
+                {{ i + 1 }} - {{ cuca }}
+            </li> 
+        </ul>
+
+    </div>
+
+</div>
+
+
+
+
+
